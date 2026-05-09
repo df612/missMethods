@@ -84,7 +84,7 @@ impute_mean <- function(ds, type = "columnwise", convert_tibble = TRUE) {
 #' ds_mis_char <- cbind(ds_mis, letters[1:20])
 #' ds_imp_char <- impute_median(ds_mis_char)
 impute_median <- function(ds, type = "columnwise", ordered_low = FALSE, convert_tibble = TRUE) {
-  apply_imputation(ds, FUN = median, ordered_low = ordered_low, convert_tibble = convert_tibble)
+  apply_imputation(ds, FUN = median, type=type, ordered_low = ordered_low, convert_tibble = convert_tibble)
 }
 
 
